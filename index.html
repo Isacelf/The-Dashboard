@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header> 
+        <div class ="header">
+            <h2 id="time&date">
+                <span class="time"></span> 
+                <span class="time-and-date-separator">-</span> 
+                <span class="date"></span></h2>
+        </div>
+    </header>
+
+<!-- Dashboard -->
+<div class="dashboard-section">
+    <h1 class="text-head">Isac Elfstrand Dashboard</h1>
+    <div class="row">
+        <!-- Snabblänkar -->
+        <div class="card">
+            <h3>Snabblänkar</h3>
+            <div class="links">
+                <ul class="quick-link-list">
+                    <li>
+                        <a href="https://www.google.com" target="_blank">Google</a>
+                        <i class="fab fa-google"></i>
+                        <button class="remove-link removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">Youtube</a>
+                        <i class="fab fa-youtube"></i>
+                        <button class="remove-link removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com" target="_blank">Github</a>
+                        <i class="fab fa-github"></i>
+                        <button class="remove-link removebtn">-</button>
+                    </li>
+                    <li>
+                        <a href="https://www.aftonbladet.se" target="_blank">Aftonbladet</a>
+                        <i class="far fa-newspaper"></i>
+                        <button class="remove-link removebtn">-</button>
+                    </li>
+                </ul>
+                <div class="add-link">
+                    <button id="add-link-button" class="add-link-button">
+                        <i class="fas fa-plus-circle"></i>Lägg till länk
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Väder -->
+        <div class="card">
+            <h3>Vädret</h3>
+            <div class="weather">
+                <div class="todays-weather">
+                    <i id="weather-icon-today" class="weather-icon"></i>
+                    <h4>Idag</h4>
+                    <p id="weather-today-text"></p>
+                    <p id="temperature-today"></p>
+                </div>
+                <div class="tomorrows-weather">
+                    <i class="weather-icon-tomorrow"></i>
+                    <h4>Imorgon</h4>
+                    <p class="weather-tomorrow-text"></p>
+                    <p class="temperature-tomorrow"></p>
+                </div>
+                <div class="dayafter-weather">
+                    <i class="weather-icon-dayafter"></i>
+                    <h4 class="third-day"></h4>
+                    <p class="weather-dayafter-text"></p>
+                    <p class="temperature-dayafter"></p>
+                </div>
+            </div>
+        </div>
+<!-- Dad Joke API -->
+<div class="card">
+    <h3>Dad Jokes</h3>
+    <div id="API">
+        <div class="joke-container">
+        </div>
+    </div>
+</div>
+        <!-- Anteckningar -->
+        <div class="card">
+            <h3>Anteckningar</h3>
+            <textarea class="textArea" id="textArea" rows="20"></textarea>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div>
+            <button class="background-button" id="randomBackground">
+                <i class="fa-solid fa-rotate-right"></i>Slumpa ny bakgrundsdbild
+            </button>
+        </div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
