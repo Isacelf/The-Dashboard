@@ -5,11 +5,12 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
-    background: url('images/placeholder.jpg') center/cover no-repeat; 
+    background: center/cover no-repeat;
     background-size: cover;
 }
+
 
 .header {
     width: 20rem;

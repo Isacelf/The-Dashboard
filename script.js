@@ -225,4 +225,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Error fetching background image:', error);
             });
     });
+    window.addEventListener('load', function () {
+        // Sätt random bild som bakgrund
+        function setRandomBackground() {
+            fetch('https://source.unsplash.com/random')
+                .then(response => {
+                    document.body.style.backgroundImage = `url('${response.url}')`;
+                })
+                .catch(error => {
+                    console.error('Error fetching background image:', error);
+                });
+        }
+    
+        setRandomBackground();
+    });
 });
