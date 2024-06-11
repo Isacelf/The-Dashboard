@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
         textArea.value = storedNotes;
     }
 
-    // Slumpa bakgrund från Unsplash API
+    // Slumpa bakgrund från Picsum
     const randomBackgroundButton = document.getElementById('randomBackground');
     randomBackgroundButton.addEventListener('click', function () {
     fetch('https://picsum.photos/1920/1080')
