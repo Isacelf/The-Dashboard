@@ -217,26 +217,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Slumpa bakgrund från Unsplash API
     const randomBackgroundButton = document.getElementById('randomBackground');
     randomBackgroundButton.addEventListener('click', function () {
-        fetch('https://source.unsplash.com/random')
+    fetch('https://picsum.photos/1920/1080')
+        .then(response => {
+            document.body.style.backgroundImage = `url('${response.url}')`;
+        })
+        .catch(error => {
+            console.error('Error fetching background image:', error);
+        });
+});
+
+window.addEventListener('load', function () {
+    // Sätt random bild som bakgrund
+    function setRandomBackground() {
+        fetch('https://picsum.photos/1920/1080')
             .then(response => {
                 document.body.style.backgroundImage = `url('${response.url}')`;
             })
             .catch(error => {
                 console.error('Error fetching background image:', error);
             });
-    });
-    window.addEventListener('load', function () {
-        // Sätt random bild som bakgrund
-        function setRandomBackground() {
-            fetch('https://source.unsplash.com/random')
-                .then(response => {
-                    document.body.style.backgroundImage = `url('${response.url}')`;
-                })
-                .catch(error => {
-                    console.error('Error fetching background image:', error);
-                });
-        }
-    
-        setRandomBackground();
-    });
+    }
+
+    setRandomBackground();
+});
+
 });
